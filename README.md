@@ -41,7 +41,7 @@ Convolutional Neural Networks (__CNN__) were invented to classify time invariant
     ```
     * The above command will output something like: 
         * yes (97%)
-        * left (0.84%)
+        * left (0.84%)  
 ##CNN architecure
 Using sequential Keras model with following layers:
 
@@ -55,7 +55,7 @@ Using sequential Keras model with following layers:
 | batch_normalization_v2 (BatchNormalization)         | (512, 16, 8, 32)   | 128    
  conv2d_2 (Conv2D)            | (512, 8, 4, 64)    | 18496   
  conv2d_3 (Conv2D)            | (512, 8, 4, 128)   | 73856   
- max_pooling2d_2 (MaxPooling2 | (512, 4, 2, 128)   | 0       
+ max_pooling2d_2 (MaxPooling2)| (512, 4, 2, 128)   | 0       
  dropout_1 (Dropout)          | (512, 4, 2, 128)   | 0       
  flatten (Flatten)            | (512, 1024)        | 0       
  dropout_2 (Dropout)          | (512, 1024)        | 0       
