@@ -42,7 +42,8 @@ Convolutional Neural Networks (__CNN__) were invented to classify time invariant
     * The above command will output something like: 
         * yes (97%)
         * left (0.84%)  
-##CNN architecure
+        
+##CNN architecure  
 Using sequential Keras model with following layers:
 
  Layer (type)                 | Output Shape       | Params                          |
