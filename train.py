@@ -3,6 +3,7 @@ from __future__ import division
 from __future__ import print_function
 
 import argparse
+import os
 from datetime import date
 import tensorflow as tf
 
@@ -29,9 +30,11 @@ def get_validation_percentage(x_train, x_test):
 
 
 def create_label_file():
-    labels = data.get_words_index()
+    if not os.path.exists(MODELS_DIR):
+        os.makedirs(MODELS_DIR)
 
     with open(LABELS_PATH, 'w') as f:
+        labels = data.get_words_index()
         for label in list(labels.keys()):
             f.write("%s\n" % label)
 

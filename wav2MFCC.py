@@ -23,7 +23,7 @@ def read_dir():
         word_dir = SOUNDS_DIR + word
         if not os.path.isdir(word_dir):
             raise Exception('Sounds directory for \'' + word + '\' not found at ' + word_dir + '!')
-git add 
+
         search_path = os.path.join(word_dir, '*.wav')
         for wav_path in gfile.glob(search_path):
             data.append({'word': word, 'file': wav_path})

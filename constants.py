@@ -9,7 +9,7 @@ TESING_PERCENTAGE = 15
 VALIDATION_PERCENTAGE = 15
 VALIDATION_FREQUENCY = 10
 SAVE_PERIOD = 10
-EPOCHS = 200
+EPOCHS = 100
 BATCH_SIZE = 512
 
 DATASET_URL = 'http://download.tensorflow.org/data/speech_commands_v0.02.tar.gz'

@@ -1,7 +1,7 @@
 CNN - Command Words Recognition
 =========
 Speech recognition in Python using [Tensorflow 2](https://www.tensorflow.org/alpha) and [Keras](https://www.tensorflow.org/versions/r2.0/api_docs/python/tf/keras) high level API.  
-Convolutional Neural Networks (__CNN__) were invented to classify time invariant data (like images). Recent researches found that, if sound is converted into its spectrogram (or better: Log-Mel spectrogram), then convolutional neural networks can be applied on sound's features (aka spectrogram) for training speech recognition model.
+Convolutional Neural Networks (__CNN__) were invented to classify time invariant data (like images). Recent researches found that, if sound is converted into its [spectrogram](https://en.wikipedia.org/wiki/Spectrogram) (or better: [Log-Mel spectrogram](https://en.wikipedia.org/wiki/Mel-frequency_cepstrum), then convolutional neural networks can be applied on sound's features (aka spectrogram) for training speech recognition model.
 ## Usage
 1. Clone repository:  
     ```cli
@@ -16,7 +16,11 @@ Convolutional Neural Networks (__CNN__) were invented to classify time invariant
     * TESTING and VALIDATION percentage // Recomended 15% - 15%
     * WANTED_WORDS // list of command words: ['yes', 'no', 'up', 'down', 'on', 'off', ...]
     * VERBOSITY //0=disable, 1=progressbar 
-3. Run training on CPU:
+3. Install requirements:
+    ```cli
+    pip install requirements.txt
+    ```
+4. Run training on CPU:
     ```cli
     cd /path/to/these/files/
     python train.py
@@ -28,11 +32,11 @@ Convolutional Neural Networks (__CNN__) were invented to classify time invariant
     * If your __SOUNDS_DIR__ is empty it will download and extract the sounds files from provided __DATASET_URL__.
     * Forcing MFCC feature extraction (_force_extract=True_) causes saving sounds features in __MFCCS_DIR__ as tensors.
     * If features are already extracted, then the training begins faster since no need to recompute MFCCs of sounds, just load them as tensor.
-4. \(Optional) You can load the pretrained model for [_transfer learning_](https://en.wikipedia.org/wiki/Transfer_learning):
+5. \(Optional) You can load the pretrained model for [_transfer learning_](https://en.wikipedia.org/wiki/Transfer_learning):
     ```cli
     python train.py --load_model=name_of_your_model
     ```
-5. \(Optional) Test your model prediction with WAV file:
+6. \(Optional) Test your model prediction with WAV file:
     ```cli
     python predict_wav.py --load_model=name_of_your_model --wav_path=/path/to/yes.wav --num_of_predictions=2
     ```
