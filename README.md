@@ -22,7 +22,6 @@ Convolutional Neural Networks (__CNN__) were invented to classify time invariant
     ```
 4. Run training on CPU:
     ```cli
-    cd /path/to/these/files/
     python train.py
     ```
     * If your are running training for first time it's recommended using '_--force_extract=True_' argument:
@@ -53,8 +52,7 @@ Using sequential Keras model with following layers:
  conv2d_1 (Conv2D)            | (512, 32, 16, 32)  | 4640
  max_pooling2d_1 (MaxPooling2)| (512, 16, 8, 32)   | 0       
  dropout (Dropout)            | (512, 16, 8, 32)   | 0       
-| batch_normalization_v2 
- (BatchNormalization)         | (512, 16, 8, 32)   | 128    
+| batch_normalization_v2 (BatchNormalization)         | (512, 16, 8, 32)   | 128    
  conv2d_2 (Conv2D)            | (512, 8, 4, 64)    | 18496   
  conv2d_3 (Conv2D)            | (512, 8, 4, 128)   | 73856   
  max_pooling2d_2 (MaxPooling2 | (512, 4, 2, 128)   | 0       
