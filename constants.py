@@ -1,0 +1,21 @@
+VERBOSITY = 1
+SAMPLE_RATE = 16000
+DURATION_MS = 1000
+FEATURES_COUNT = 64
+DESIRED_SAMPLES = int(SAMPLE_RATE * DURATION_MS / 1000)
+
+DROPOUT_RATE = 0.5
+TESING_PERCENTAGE = 15
+VALIDATION_PERCENTAGE = 15
+VALIDATION_FREQUENCY = 10
+SAVE_PERIOD = 10
+EPOCHS = 200
+BATCH_SIZE = 512
+
+DATASET_URL = 'http://download.tensorflow.org/data/speech_commands_v0.02.tar.gz'
+SOUNDS_DIR = './trainset/sounds/'
+MFCCS_DIR = './trainset/MFCCS/'
+MODELS_DIR = './models/'
+LABELS_PATH = MODELS_DIR + 'labels.txt'
+
+WANTED_WORDS = ['left', 'right', 'up', 'down']
