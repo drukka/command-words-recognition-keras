@@ -43,17 +43,17 @@ Convolutional Neural Networks (__CNN__) were invented to classify time invariant
         * yes (97%)
         * left (0.84%)  
         
-##CNN architecure  
+## CNN architecure  
 Using sequential Keras model with following layers:
 
- Layer (type)                 | Output Shape       | Params                          |
- :---                         | :---               | :---                              |
+ Layer (type)                 | Output Shape       | Params                          
+ :---                         | :---               | :---                     
  conv2d (Conv2D)              | (512, 64, 32, 16)  | 416    
  max_pooling2d (MaxPooling2D) | (512, 32, 16, 16)  | 0   
  conv2d_1 (Conv2D)            | (512, 32, 16, 32)  | 4640
  max_pooling2d_1 (MaxPooling2)| (512, 16, 8, 32)   | 0       
  dropout (Dropout)            | (512, 16, 8, 32)   | 0       
-| batch_normalization_v2 (BatchNormalization)         | (512, 16, 8, 32)   | 128    
+| batch_normalization_v2 (BatchNormalization)      | (512, 16, 8, 32)   | 128    
  conv2d_2 (Conv2D)            | (512, 8, 4, 64)    | 18496   
  conv2d_3 (Conv2D)            | (512, 8, 4, 128)   | 73856   
  max_pooling2d_2 (MaxPooling2)| (512, 4, 2, 128)   | 0       
